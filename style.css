@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: TTLakes;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: TTLakes;
+  src: url(./TTLakes/TTLakes-Regular.ttf);
+  font-weight: normal;
+}
+
+.subtitle {
+  color: #7e7e82;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.subtitle__title {
+  font-family: TTLakes;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.main-swipper {
+  background-color: #f8f8f8;
+  padding: 16px 16px;
+  padding-bottom: 50px;
+}
+
+.swipper__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.swiper-slide {
+  height: 72px;
+}
+
+.collapse-expand {
+  display: none;
+}
+
+.group-swipper-items {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination {
+  transform: translate3d(0, 6px, 0);
+}
+
+.go_hover {
+  border-radius: 50%;
+}
+
+.go_hover:hover {
+  transition: 0.3s;
+	box-shadow: 0 0 10px 3px #ff709b;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .main-swipper {
+    padding: 24px 24px;
+  }
+
+  .swipper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    width: auto;
+    overflow: hidden;
+    max-height: 176px;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .swipper__button {
+    width: 224px !important;
+    margin-right: 0px !important;
+  }
+
+  .collapse-expand {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .collapse-expand__button {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .collapse-expand__button::before {
+    position: absolute;
+    content: url(./img/expand.png);
+    top: -6px;
+    left: 8px;
+    transition: transform 0.5s ease-out;
+    transform: rotate(180deg);
+  }
+
+  .collapse-expand__button.active::before {
+    transform: rotate(0deg);
+  }
+
+  .group-swipper-items {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .main-swipper {
+    padding: 24px 32px;
+  }
+
+  .swipper {
+    gap: 16px 32px;
+  }
+
+  .swipper__button {
+    height: 72px;
+    width: 240px;
+  }
+}
